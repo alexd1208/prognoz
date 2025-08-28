@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погодное приложение</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌤️ FAST ПРОГНОЗ </h1>
+        </header>
+        
+        <main class="main-content">
+            <div class="search-section">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Введите название города..."
+                    class="search-input"
+                >
+                <button onclick="getWeather()" class="search-btn">
+                    Узнать прогноз
+                </button>
+            </div>
+            
+            <div id="weatherResult" class="weather-result">
+                <div class="welcome-message">
+                    <p>Введите название города, чтобы узнать погоду</p>
+                </div>
+            </div>
+            
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Загрузка данных...</p>
+            </div>
+            
+            <div id="error" class="error hidden">
+                <p>Ошибка загрузки данных. Попробуйте еще раз.</p>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2025 FAST ПРОГНОЗ | Данные с OpenWeatherMap</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
